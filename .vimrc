@@ -72,7 +72,7 @@ if has("autocmd")
     \ if line("'\"") > 0 && line("'\"") <= line("$") |
     \   exe "normal g`\"" |
     \ endif
-
+  autocmd BufNewFile,BufRead httpd*.conf* set filetype=apache
   augroup END
 
 else
