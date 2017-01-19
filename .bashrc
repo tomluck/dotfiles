@@ -12,6 +12,7 @@ alias rm='rm -i'
 
 # less options
 export LESS='-R -gj10 --no-init --quit-if-one-screen --RAW-CONTROL-CHARS'
+export LESSOPEN="| /usr/bin/src-hilite-lesspipe.sh %s"
 
 # User specific aliases and functions
 if [ -f .localrc ]; then
