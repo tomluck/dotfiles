@@ -75,6 +75,10 @@ if has("autocmd")
   autocmd BufNewFile,BufRead httpd*.conf* set filetype=apache
   augroup END
 
+  augroup fileTypeIndent
+  autocmd!
+  autocmd BufNewFile,BufRead *.sh setlocal tabstop=2 softtabstop=2 shiftwidth=2
+  augroup END
 else
 
   set autoindent		" always set autoindenting on
@@ -89,6 +93,7 @@ set shiftwidth=4
 set softtabstop=4
 set cindent
 set expandtab
+set smartindent
 let _curfile=expand("%:r")
 if _curfile == 'Makefile'
     set noexpandtab
